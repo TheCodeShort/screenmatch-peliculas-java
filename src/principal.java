@@ -5,16 +5,23 @@ public class principal {
         miPelicula.nombre = "Matrix";
         miPelicula.fechaDeLanzamiento = 1997;
         miPelicula. duracionNeMinutos = 120;
-        System.out.println("mi peliculas es: " + miPelicula.nombre);
-        System.out.println("fheca de lanzamiuento es:" + miPelicula.fechaDeLanzamiento);
+
+        miPelicula.muestraFichaTecnica();
+        miPelicula.evalua(10);
+        miPelicula.evalua(10);
+        System.out.println("sumatoria es:" + miPelicula.sumaDeLasEvaluaciones);
+        System.out.println("total es: " + miPelicula.totalDeLasevaluaciones);
+        System.out.println("la media es: " + miPelicula.calculaMedia());
 
         pelicula otraPelicula = new pelicula();
         otraPelicula.nombre = "el dia";
         otraPelicula.fechaDeLanzamiento = 2010;
         otraPelicula.duracionNeMinutos  = 120;
 
-        System.out.println("mi peliculas es: " + otraPelicula.nombre);
-        System.out.println("fheca de lanzamiuento es:" + otraPelicula.fechaDeLanzamiento);
+        otraPelicula.muestraFichaTecnica();/*con esto podemos evitar repetir codigo */
+
+
+
 
     }
 }
