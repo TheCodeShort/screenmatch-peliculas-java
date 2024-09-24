@@ -1,24 +1,23 @@
+import com.alura.screenmatch.metodos.pelicula;/*esto se genera automaticamente si se elimina nustras variables no se encontraran
+                                                ya que movimos nuestros achivo a otra carpeta*/
+
 public class principal {
 
     public static void main(String[] args) {
         pelicula miPelicula = new pelicula(); /*new crea una nueva instancia, crea un nuevo espacio par almacenar datos en esta caja */
-        miPelicula.nombre = "Matrix";
-        miPelicula.fechaDeLanzamiento = 1997;
-        miPelicula. duracionNeMinutos = 120;
+        miPelicula.setNombre("Matrix");/*al ser privado usamos un setter para poder cambiar el valor o si es un sting podemos cambiar l oque dice dentro*/
+        miPelicula.setFechaDeLanzamiento(1997);
+        miPelicula.setDuracionNeMinutos(120);
+        miPelicula.setIncluidoEnELPlan(true);
 
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(10);
         miPelicula.evalua(10);
-        System.out.println("sumatoria es:" + miPelicula.sumaDeLasEvaluaciones);
-        System.out.println("total es: " + miPelicula.totalDeLasevaluaciones);
+
+        System.out.println("total es: " + miPelicula.getTotalDeLasEvaluaciones());/*con get podemos mostrar el valor pero cuando trate de modificar el valor no podra hacerlo*/
         System.out.println("la media es: " + miPelicula.calculaMedia());
 
-        pelicula otraPelicula = new pelicula();
-        otraPelicula.nombre = "el dia";
-        otraPelicula.fechaDeLanzamiento = 2010;
-        otraPelicula.duracionNeMinutos  = 120;
 
-        otraPelicula.muestraFichaTecnica();/*con esto podemos evitar repetir codigo */
 
 
 
