@@ -1,3 +1,4 @@
+import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
 import com.alura.screenmatch.modelos.Pelicula;/*esto se genera automaticamente si se elimina nustras variables no se encontraran
                                                 ya que movimos nuestros achivo a otra carpeta*/
 import com.alura.screenmatch.modelos.Serie;
@@ -28,6 +29,23 @@ public class Principal {
         System.out.println("***************************************************************");
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
+
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("el oso");
+        otraPelicula.setFechaDeLanzamiento(1998);
+        otraPelicula.setDuracionNeMinutos(188);
+
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(otraPelicula);
+        System.out.println("*****************************************************************");
+        System.out.println("Tiempo necesario para ver tus tutulos favoritos estas vacasiones" + calculadora.getTiempoTotal());
+        System.out.println(calculadora.getTiempoTotal());
+
+
+
+
 
 
     }
