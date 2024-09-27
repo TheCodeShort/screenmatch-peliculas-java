@@ -1,4 +1,6 @@
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
+import com.alura.screenmatch.calculos.FiltroRecomendacion;
+import com.alura.screenmatch.modelos.Episodio;
 import com.alura.screenmatch.modelos.Pelicula;/*esto se genera automaticamente si se elimina nustras variables no se encontraran
                                                 ya que movimos nuestros achivo a otra carpeta*/
 import com.alura.screenmatch.modelos.Serie;
@@ -40,12 +42,19 @@ public class Principal {
         calculadora.incluye(casaDragon);
         calculadora.incluye(otraPelicula);
         System.out.println("*****************************************************************");
-        System.out.println("Tiempo necesario para ver tus tutulos favoritos estas vacasiones" + calculadora.getTiempoTotal());
+        System.out.println("Tiempo necesario para ver tus tutulos favoritos estas vacasiones: " + calculadora.getTiempoTotal());
         System.out.println(calculadora.getTiempoTotal());
 
+        FiltroRecomendacion filtroRecomendacion= new FiltroRecomendacion();
+        filtroRecomendacion.filtro(miPelicula);
 
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombres("la casa de papel");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisializaciones(300);
 
-
+        filtroRecomendacion.filtro(episodio);
 
 
     }
