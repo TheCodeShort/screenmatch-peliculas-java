@@ -1,8 +1,8 @@
 package com.alura.screenmatch.calculos;
-
+import com.alura.screenmatch.modelos.Titulo;
 import com.alura.screenmatch.modelos.Pelicula;/*este import aparece por que en el void se pueso  un parametro llamado Pelicula que es la clase ya creada*/
 import com.alura.screenmatch.modelos.Serie;
-import com.alura.screenmatch.modelos.Titulo;
+
 
 public class CalculadoraDeTiempo {
     private int tiempoTotal;

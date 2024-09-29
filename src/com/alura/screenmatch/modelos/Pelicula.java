@@ -3,7 +3,7 @@ package com.alura.screenmatch.modelos;
 import com.alura.screenmatch.calculos.Clasificacion;
 
 public class Pelicula extends Titulo implements Clasificacion { /*con extends decimos que pelicula es hijo de Titulo y pasa a tener todos los mismo atributos y metodos
-                                                                interfaces (interface y implements buscar)*/
+                                                                implements decimos que para usar la clases clasificacion que es una interface debemnos tener un metodo un get (interface y implements buscar)*/
 
    private String director;
 

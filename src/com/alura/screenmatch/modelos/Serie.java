@@ -5,7 +5,8 @@ public class Serie extends Titulo{/*extends me dice que serie es hija de Titulo 
     int episodiosPorTemporada;
     int minutosPorEpisodio;
 
-    @Override/*se puede borrar o puede que no este pero es mejor dejarlo o colocarlo ya que pueden hacer cambios */
+    @Override/*se puede borrar o puede que no este pero es mejor dejarlo o colocarlo ya que pueden hacer cambios
+               indica que este metodo es una sobre escritura */
     public int getDuracionEnMinutos() {/* @Override esto nos indica que es una sobre escritura de metoso */
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;/*supper indica que retorna el metodo de de nustra super clase de la clases pricipal  */
     }
