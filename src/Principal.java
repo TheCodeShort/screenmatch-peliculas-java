@@ -5,6 +5,8 @@ import com.alura.screenmatch.modelos.Pelicula;/*esto se genera automaticamente s
                                                 ya que movimos nuestros achivo a otra carpeta*/
 import com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -55,9 +57,23 @@ public class Principal {
         episodio.setNombres("la casa de papel");
         episodio.setSerie(casaDragon);
         episodio.setTotalVisializaciones(300);
-
         filtroRecomendacion.filtro(episodio);
 
+        /*Pelicula peliculaDaBuno = new Pelicula(); esta estructur atambein se peude usasr o la de abajo */
+        var peliculaDaBuno = new Pelicula();/*por mas que diga var no se le puede cambiar el tipo de dato que tienes dentro*/
+        peliculaDaBuno.setNombre("el señor de los anillos");
+        peliculaDaBuno.setDuracionNeMinutos(180);
+        peliculaDaBuno.setFechaDeLanzamiento(2001);
 
+        ArrayList<Pelicula> listataDePeliculas = new ArrayList<>();/*todo lo que colo que se coloqeu dentro del arary va a pertenecer a la clase Pelicula*/
+        listataDePeliculas.add(peliculaDaBuno);
+        listataDePeliculas.add(miPelicula);
+
+        System.out.println("********************************************************");
+        System.out.println("Tamño de la lista: " + listataDePeliculas.size());/*al poner un punto en lla lista salen los metodos */
+        System.out.println("La primera pelicula es: " + listataDePeliculas.get(0).getNombre());/*si ponemos en google javadoc  la vercion de java que estamos utilizando y ponemos ArrayList encontraremos informacion*/
+        System.out.println("La lista de la pelicula: " + listataDePeliculas);
+
+        System.out.println("El toString de la pelicula: " + listataDePeliculas.get(0).toString());
     }
 }

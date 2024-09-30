@@ -20,4 +20,9 @@ public class Pelicula extends Titulo implements Clasificacion { /*con extends de
         return (int) (calculaMedia()/2);/*como requiere un tipo de dato int nos sale error por la divicion pero de esta manera podemos hacer un cats
                                         de estamenra  (int) de esta manera convertimos el double en un entero*/
     }
+
+    @Override
+    public String toString() {
+        return "pelicula: " + this.getNombre() + "("+ getFechaDeLanzamiento() + ")";/*reutilizar metdos*/
+    }
 }
