@@ -11,10 +11,10 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Pelicula miPelicula = new Pelicula(); /*new crea una nueva instancia, crea un nuevo espacio para almacenar datos en esta caja */
-        miPelicula.setNombre("Matrix");/*al ser privado usamos un setter para poder cambiar el valor o si es un sting podemos cambiar l oque dice dentro*/
-        miPelicula.setFechaDeLanzamiento(1997);
-        miPelicula.setDuracionNeMinutos(120);
+        Pelicula miPelicula = new Pelicula("Matrix", 1997); /*new crea una nueva instancia, crea un nuevo espacio para almacenar datos en esta caja */
+                                            /*estos dos parametros bienen de constructores por eso no se le hacer un setter*/
+
+        miPelicula.setDuracionNeMinutos(120);/*al ser privado usamos un setter para poder cambiar el valor o si es un sting podemos cambiar lo que dice dentro*/
         miPelicula.setIncluidoEnELPlan(true);
         miPelicula.setDirector("El paco");
         miPelicula.evalua(10);
@@ -25,9 +25,8 @@ public class Principal {
         System.out.println("la media es: " + miPelicula.calculaMedia());
         System.out.println("Director de la pelicula es: " + miPelicula.getDirector());
 
-        Serie casaDragon = new Serie();/*nuevo objeto*/
-        casaDragon.setNombre("La casa del dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragon", 2022);/*nuevo objeto, /*esto es un constructor no es un metodo*/
+
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
@@ -36,12 +35,12 @@ public class Principal {
         System.out.println("cantidad de temporadas: " + casaDragon.getTemporadas());
         System.out.println("minutos por temporada: " + casaDragon.getMinutosPorEpisodio());
         System.out.println("minutos por episodio: " + casaDragon.getEpisodiosPorTemporada());
-        Pelicula otraPelicula = new Pelicula();
+        Pelicula otraPelicula = new Pelicula("avatar", 2023);
         otraPelicula.setNombre("el oso");
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionNeMinutos(188);
 
-        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();/*esto es un constructor no es un metodo*/
         calculadora.incluye(miPelicula);
         calculadora.incluye(casaDragon);
         calculadora.incluye(otraPelicula);
@@ -52,7 +51,7 @@ public class Principal {
         FiltroRecomendacion filtroRecomendacion= new FiltroRecomendacion();
         filtroRecomendacion.filtro(miPelicula);
 
-        Episodio episodio = new Episodio();
+        Episodio episodio = new Episodio();/*esto es un constructor no es un metodo*/
         episodio.setNumero(1);
         episodio.setNombres("la casa de papel");
         episodio.setSerie(casaDragon);
@@ -60,8 +59,9 @@ public class Principal {
         filtroRecomendacion.filtro(episodio);
 
         /*Pelicula peliculaDaBuno = new Pelicula(); esta estructur atambein se peude usasr o la de abajo */
-        var peliculaDaBuno = new Pelicula();/*por mas que diga var no se le puede cambiar el tipo de dato que tienes dentro*/
-        peliculaDaBuno.setNombre("el señor de los anillos");
+        var peliculaDaBuno = new Pelicula("el señor de los anillos", 2001);/*por mas que diga var no se le puede cambiar el tipo de dato que tienes dentro*/
+        /*y si creamos un constructor para cambiar el nombre de la pelicula*/
+
         peliculaDaBuno.setDuracionNeMinutos(180);
         peliculaDaBuno.setFechaDeLanzamiento(2001);
 
@@ -75,5 +75,7 @@ public class Principal {
         System.out.println("La lista de la pelicula: " + listataDePeliculas);
 
         System.out.println("El toString de la pelicula: " + listataDePeliculas.get(0).toString());
+
+
     }
 }

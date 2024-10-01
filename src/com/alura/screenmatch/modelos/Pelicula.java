@@ -7,6 +7,12 @@ public class Pelicula extends Titulo implements Clasificacion { /*con extends de
 
    private String director;
 
+
+
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento); /*el super no menciona que vamos a reredar o llamar de la clase padre o principal como lo que es Titulo*/
+    }
+
     public String getDirector() {
         return director;
     }
@@ -23,6 +29,7 @@ public class Pelicula extends Titulo implements Clasificacion { /*con extends de
 
     @Override
     public String toString() {
-        return "pelicula: " + this.getNombre() + "("+ getFechaDeLanzamiento() + ")";/*reutilizar metdos*/
+        return "pelicula: " + this.getNombre() + "("+ getFechaDeLanzamiento() + ")";/*reutilizar metdos, toString es un metodo de objec pero estos meodo se pueden modificar
+                                                                                       tambien identificamos que tienes una anotacion @Override*/
     }
 }

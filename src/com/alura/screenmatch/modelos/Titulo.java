@@ -10,7 +10,13 @@ public class Titulo {
         private int totalDeLasevaluaciones;/*aca como esta en private no se puede modificar el valor y saldra error pero si queremos obtener el
                                             resultado o dejarlo ver, usamos GET*/
 
-        public int getTotalDeLasEvaluaciones(){/*metodo de encapsulacmiento*/
+
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+    public int getTotalDeLasEvaluaciones(){/*metodo de encapsulacmiento*/
             return totalDeLasevaluaciones;
         }
 
@@ -27,6 +33,12 @@ public class Titulo {
             return nombre;
         }
 
+         public void setNombre(String nombre) {/*este setNombre nos ayuda a que el usuario escriba el nombre
+                                           pero en la variable nombre que se declara en la clase pricipal toca declararla como
+                                            setNombre("aca va el estring");*/
+            this.nombre = nombre;/*este this indica que se refiere al atributo de esta clase y el parametro es el valor qeu el usuario va a digitar */
+    }
+
         public int getFechaDeLanzamiento() {
             return fechaDeLanzamiento;
         }
@@ -40,11 +52,6 @@ public class Titulo {
             return incluidoEnELPlan;
         }
 
-        public void setNombre(String nombre) {/*este setNombre nos ayuda a que el usuario escriba el nombre
-                                           pero en la variable nombre que se declara en la clase pricipal toca declararla como
-                                            setNombre("aca va el estring");*/
-            this.nombre = nombre;/*este this indica que se refiere al atributo de esta clase y el parametro es el valor qeu el usuario va a digitar */
-        }
 
         public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
             this.fechaDeLanzamiento = fechaDeLanzamiento;
