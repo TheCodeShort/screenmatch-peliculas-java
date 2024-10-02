@@ -1,3 +1,5 @@
+package com.alura.screenmatch.Principal;
+
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
 import com.alura.screenmatch.calculos.FiltroRecomendacion;
 import com.alura.screenmatch.modelos.Episodio;
@@ -12,7 +14,7 @@ public class Principal {
     public static void main(String[] args) {
 
         Pelicula miPelicula = new Pelicula("Matrix", 1997); /*new crea una nueva instancia, crea un nuevo espacio para almacenar datos en esta caja */
-                                            /*estos dos parametros bienen de constructores por eso no se le hacer un setter*/
+        /*estos dos parametros bienen de constructores por eso no se le hacer un setter*/
 
         miPelicula.setDuracionNeMinutos(120);/*al ser privado usamos un setter para poder cambiar el valor o si es un sting podemos cambiar lo que dice dentro*/
         miPelicula.setIncluidoEnELPlan(true);
@@ -35,6 +37,7 @@ public class Principal {
         System.out.println("cantidad de temporadas: " + casaDragon.getTemporadas());
         System.out.println("minutos por temporada: " + casaDragon.getMinutosPorEpisodio());
         System.out.println("minutos por episodio: " + casaDragon.getEpisodiosPorTemporada());
+
         Pelicula otraPelicula = new Pelicula("avatar", 2023);
         otraPelicula.setNombre("el oso");
         otraPelicula.setFechaDeLanzamiento(1998);

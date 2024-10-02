@@ -1,0 +1,87 @@
+Index: src/Principal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Principal.java b/src/Principal.java
+new file mode 100644
+--- /dev/null	(date 1727234320385)
++++ b/src/Principal.java	(date 1727234320385)
+@@ -0,0 +1,26 @@
++import com.alura.screenmatch.metodos.pelicula;/*esto se genera automaticamente si se elimina nustras variables no se encontraran
++                                                ya que movimos nuestros achivo a otra carpeta*/
++
++public class principal {
++
++    public static void main(String[] args) {
++        pelicula miPelicula = new pelicula(); /*new crea una nueva instancia, crea un nuevo espacio par almacenar datos en esta caja */
++        miPelicula.setNombre("Matrix");/*al ser privado usamos un setter para poder cambiar el valor o si es un sting podemos cambiar l oque dice dentro*/
++        miPelicula.setFechaDeLanzamiento(1997);
++        miPelicula.setDuracionNeMinutos(120);
++        miPelicula.setIncluidoEnELPlan(true);
++
++        miPelicula.muestraFichaTecnica();
++        miPelicula.evalua(10);
++        miPelicula.evalua(10);
++
++        System.out.println("total es: " + miPelicula.getTotalDeLasEvaluaciones());/*con get podemos mostrar el valor pero cuando trate de modificar el valor no podra hacerlo*/
++        System.out.println("la media es: " + miPelicula.calculaMedia());
++
++
++
++
++
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e8f57f42-d7ec-47ab-894b-f13a134e0795\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/com/alura/screenmatch/metodos/pelicula.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pelicula.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/principal.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/principal.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2mDt5qNQutUtQJUPGiJesJ9nght\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.principal.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Merging main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/ALURA/screenmatch-peliculas/src/Main.java\",\r\n    \"settings.editor.selected.configurable\": \"editor.preferences.fonts.default\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e8f57f42-d7ec-47ab-894b-f13a134e0795\" name=\"Changes\" comment=\"\" />\r\n      <created>1726622832173</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1726622832173</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f026c77070b199926ba27efd3380b6b5cf6224e7)
++++ b/.idea/workspace.xml	(date 1727234423582)
+@@ -5,11 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e8f57f42-d7ec-47ab-894b-f13a134e0795" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/metodos/pelicula.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pelicula.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,17 +37,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.principal.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "Merging main",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "kotlin-language-version-configured": "true",
+-    "onboarding.tips.debug.path": "C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/ALURA/screenmatch-peliculas/src/Main.java",
+-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.principal.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/ALURA/screenmatch-peliculas/src/Main.java&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
