@@ -80,5 +80,6 @@ public class Principal {
         System.out.println("El toString de la pelicula: " + listataDePeliculas.get(0).toString());
 
 
+
     }
 }

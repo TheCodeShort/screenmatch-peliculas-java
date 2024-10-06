@@ -15,6 +15,11 @@ public class Serie extends Titulo{/*extends me dice que serie es hija de Titulo 
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;/*supper indica que retorna el metodo de de nustra super clase de la clases pricipal  */
     }
 
+    @Override
+    public String toString() {
+        return "Serie: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
+    }
+
     public int getTemporadas() {
         return temporadas;
     }

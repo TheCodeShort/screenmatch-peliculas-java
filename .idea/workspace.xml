@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e8f57f42-d7ec-47ab-894b-f13a134e0795" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/PrincipalConListas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/PrincipalConListas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Titulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Titulo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/ALURA/screenmatch-peliculas/src/Main.java",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

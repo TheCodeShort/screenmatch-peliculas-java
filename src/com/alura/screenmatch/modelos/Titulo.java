@@ -1,6 +1,6 @@
 package com.alura.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos objetos que sena de Titulo */
 
         private String nombre;/*esto es un atributo*/
         private int fechaDeLanzamiento;
@@ -11,7 +11,7 @@ public class Titulo {
                                             resultado o dejarlo ver, usamos GET*/
 
 
-    public Titulo(String nombre, int fechaDeLanzamiento) {
+    public Titulo(String nombre, int fechaDeLanzamiento) { /*construcotor*/
         this.nombre = nombre;
         this.fechaDeLanzamiento = fechaDeLanzamiento;
     }
@@ -80,4 +80,9 @@ public class Titulo {
         public double calculaMedia(){/*aca se nececcita retornar o sino nos aroja error*/
             return sumaDeLasEvaluaciones / totalDeLasevaluaciones;
         }
+
+    @Override
+    public int compareTo(Titulo otroTitulo) {/*comparar por nombre*/
+        return this.getNombre().compareTo(otroTitulo.getNombre());/*comparar el nombre del primer objeto con el que esta en el CompareTo()*/
+    }
 }
