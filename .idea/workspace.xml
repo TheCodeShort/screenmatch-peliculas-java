@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8f57f42-d7ec-47ab-894b-f13a134e0795" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/PrincipalConBusqueda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/TituloOmdb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenmatch-peliculas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/screenmatch-peliculas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/PrincipalConBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/Principal/PrincipalConBusqueda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Titulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alura/screenmatch/modelos/Titulo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -67,7 +72,11 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/Dependencias Java/GSON/gson-2.11.0.jar",
     "onboarding.tips.debug.path": "C:/Users/rannd/OneDrive/Documentos/DOCUMENTOS RANNY/DOCUMENTOS INFORMACION/PROGRAMACION GENERAL/JAVA/ALURA/screenmatch-peliculas/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults"
   }
 }]]></component>

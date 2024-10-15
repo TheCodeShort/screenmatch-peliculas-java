@@ -1,8 +1,12 @@
 package com.alura.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos objetos que sena de Titulo */
 
+        @SerializedName("Title")/*esta anotacion con su parametro en string se debe a que el formato json de la API al imprimirla aparece la informacion y hay aparece Title*/
         private String nombre;/*esto es un atributo*/
+        @SerializedName("Year")/*te permite mapear los nombres de los campos en el JSON con los nombres de los atributos en tu objeto Java.*/
         private int fechaDeLanzamiento;
         private int duracionEnMinutos;
         private boolean incluidoEnELPlan;
@@ -14,6 +18,12 @@ public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos obj
     public Titulo(String nombre, int fechaDeLanzamiento) { /*construcotor*/
         this.nombre = nombre;
         this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+    public Titulo(TituloOmdb miTituloOmdb) {
+        this.nombre = miTituloOmdb.Title();
+        this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.Year());
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.Runtime().substring(0,2));
     }
 
     public int getTotalDeLasEvaluaciones(){/*metodo de encapsulacmiento*/
@@ -82,7 +92,17 @@ public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos obj
         }
 
     @Override
+    public String toString() {
+        return "nombre='" + nombre + '\'' +
+                ", fechaDeLanzamiento=" + fechaDeLanzamiento +
+                ", duracion=" + duracionEnMinutos;
+    }
+
+    @Override
     public int compareTo(Titulo otroTitulo) {/*comparar por nombre*/
         return this.getNombre().compareTo(otroTitulo.getNombre());/*comparar el nombre del primer objeto con el que esta en el CompareTo()*/
+
+
+
     }
 }
