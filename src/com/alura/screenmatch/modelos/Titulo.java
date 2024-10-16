@@ -1,5 +1,6 @@
 package com.alura.screenmatch.modelos;
 
+import com.alura.screenmatch.excepcion.ErrorEnConvericonDeException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos objetos que sena de Titulo */
@@ -23,7 +24,12 @@ public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos obj
     public Titulo(TituloOmdb miTituloOmdb) {
         this.nombre = miTituloOmdb.Title();
         this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.Year());
-        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.Runtime().substring(0,2));
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.Runtime().substring(0,3).replace("",""));
+        if(miTituloOmdb.Runtime().contains("N/A")){
+            throw new ErrorEnConvericonDeException("no puede convertir la duracion," + "porque contiene un N/A");
+
+        }
+
     }
 
     public int getTotalDeLasEvaluaciones(){/*metodo de encapsulacmiento*/
