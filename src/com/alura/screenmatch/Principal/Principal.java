@@ -68,7 +68,7 @@ public class Principal {
         peliculaDaBuno.setDuracionNeMinutos(180);
         peliculaDaBuno.setFechaDeLanzamiento(2001);
 
-        ArrayList<Pelicula> listataDePeliculas = new ArrayList<>();/*todo lo que colo que se coloqeu dentro del arary va a pertenecer a la clase Pelicula*/
+        ArrayList<Pelicula> listataDePeliculas = new ArrayList<>();/*Todo lo que colo que se coloqeu dentro del arary va a pertenecer a la clase Pelicula*/
         listataDePeliculas.add(peliculaDaBuno);
         listataDePeliculas.add(miPelicula);
 
@@ -77,9 +77,7 @@ public class Principal {
         System.out.println("La primera pelicula es: " + listataDePeliculas.get(0).getNombre());/*si ponemos en google javadoc  la vercion de java que estamos utilizando y ponemos ArrayList encontraremos informacion*/
         System.out.println("La lista de la pelicula: " + listataDePeliculas);
 
-        System.out.println("El toString de la pelicula: " + listataDePeliculas.get(0).toString());
-
-
+        System.out.println("El toString de la pelicula: " + listataDePeliculas.get(0).toString());/*el toString nos sirve para traducir ciertos texto, en este caso cuando se imprime el codigo sale unos numeros*/
 
     }
 }

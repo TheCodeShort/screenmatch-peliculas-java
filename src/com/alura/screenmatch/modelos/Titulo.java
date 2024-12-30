@@ -5,15 +5,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos objetos que sena de Titulo */
 
-        @SerializedName("Title")/*esta anotacion con su parametro en string se debe a que el formato json de la API al imprimirla aparece la informacion y hay aparece Title*/
+       /* @SerializedName("Title")*//*esta anotacion con su parametro en string se debe a que el formato json de la API al imprimirla aparece la informacion y hay aparece Title*/
         private String nombre;/*esto es un atributo*/
-        @SerializedName("Year")/*te permite mapear los nombres de los campos en el JSON con los nombres de los atributos en tu objeto Java.*/
+        /*@SerializedName("Year")*//*te permite mapear los nombres de los campos en el JSON con los nombres de los atributos en tu objeto Java.*/
         private int fechaDeLanzamiento;
         private int duracionEnMinutos;
         private boolean incluidoEnELPlan;
         private double sumaDeLasEvaluaciones;
         private int totalDeLasevaluaciones;/*aca como esta en private no se puede modificar el valor y saldra error pero si queremos obtener el
-                                            resultado o dejarlo ver, usamos GET*/
+                                            resultado o dejarlo ver++++++++++++++++++++++++++++, usamos GET*/
 
 
     public Titulo(String nombre, int fechaDeLanzamiento) { /*construcotor*/
@@ -22,10 +22,11 @@ public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos obj
     }
 
     public Titulo(TituloOmdb miTituloOmdb) {
-        this.nombre = miTituloOmdb.Title();
-        this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.Year());
-        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.Runtime().substring(0,3).replace("",""));
-        if(miTituloOmdb.Runtime().contains("N/A")){
+        this.nombre = miTituloOmdb.title();
+        this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.year());
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,2).replace("",""));
+
+        if(miTituloOmdb.runtime().contains("N/A")){ //aca podemos crear nuestra propia Exepcion
             throw new ErrorEnConvericonDeException("no puede convertir la duracion," + "porque contiene un N/A");
 
         }
@@ -99,13 +100,13 @@ public class Titulo implements Comparable<Titulo>{/*aca vamos a comparar dos obj
 
     @Override
     public String toString() {
-        return "nombre='" + nombre + '\'' +
-                ", fechaDeLanzamiento=" + fechaDeLanzamiento +
-                ", duracion=" + duracionEnMinutos;
+        return "(nombre = " + nombre +
+                ", fechaDeLanzamiento = " + fechaDeLanzamiento +
+                ", duracion = " + duracionEnMinutos + ")";
     }
 
     @Override
-    public int compareTo(Titulo otroTitulo) {/*comparar por nombre*/
+    public int compareTo(Titulo otroTitulo) {/*comparar por nombre aca se crea la una variable llamada otroTitulo que representa a Titlo*/
         return this.getNombre().compareTo(otroTitulo.getNombre());/*comparar el nombre del primer objeto con el que esta en el CompareTo()*/
 
 
